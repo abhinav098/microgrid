@@ -14,7 +14,7 @@ class MultiAgentServicesController < ApplicationController
 
     respond_to do |format|
       if @multi_agent_service.save
-        format.html { redirect_to multi_agent_services_path, notice: 'Multi agent service was successfully created.' }
+        format.html { redirect_to multi_agent_services_path, notice: 'Time was successfully calculated.' }
       else
         format.html { render :new }
       end
@@ -26,7 +26,7 @@ class MultiAgentServicesController < ApplicationController
   def update
     respond_to do |format|
       if @multi_agent_service.update(multi_agent_service_params)
-        format.html { redirect_to multi_agent_services_path, notice: 'Multi agent service was successfully updated.' }
+        format.html { redirect_to multi_agent_services_path, notice: 'Time calculated was successfully updated.' }
       else
         format.html { render :edit }
       end
