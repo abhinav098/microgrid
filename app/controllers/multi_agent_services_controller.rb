@@ -38,7 +38,7 @@ class MultiAgentServicesController < ApplicationController
   def destroy
     @multi_agent_service.destroy
     respond_to do |format|
-      format.html { redirect_to multi_agent_services_url, notice: 'Multi agent service was successfully destroyed.' }
+      format.html { redirect_to multi_agent_services_url, notice: 'Entry was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
