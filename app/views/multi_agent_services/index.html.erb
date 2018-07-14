@@ -21,11 +21,17 @@
           <td class = "data"><%= multi_agent_service.consumers_count %></td>
           <td class = "data"><%= multi_agent_service.prosumers_count %></td>
           <td class = "data"><%= multi_agent_service.grid_kind %></td>
-          <td class = "data"><%= "#{multi_agent_service.total_time_consumed} μs" %></td>
+          <td class = "data"><%= multi_agent_service.render_time %></td>
           <td><%= link_to 'Edit', edit_multi_agent_service_path(multi_agent_service) %></td>
           <td><%= link_to 'Delete', multi_agent_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <p> Total Time Consumed = [ (t1 + t2 + t3 + t4) x total load(Number of Consumers + Number of Prosumers) ]</p>
+  <p>
+    * t1 = Request time,
+    t2= time taken to reach to first agent
+    t3= total time consumed in inter-agent processing
+    t4 = request returning time</p>
 <% end %>
