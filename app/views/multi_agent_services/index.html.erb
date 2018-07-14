@@ -1,0 +1,31 @@
+<br>
+<br>
+<%= render 'form', multi_agent_service: MultiAgentService.new %>
+<% if @multi_agent_services.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th class = "heading">Number of Agents</th>
+        <th class = "heading">Number of Consumers</th>
+        <th class = "heading">Number of Prosumers</th>
+        <th class = "heading">Grid type</th>
+        <th class = "heading">Total time consumed</th>
+        <th class = "heading" colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @multi_agent_services.each do |multi_agent_service| %>
+        <tr>
+          <td class = "data"><%= multi_agent_service.agents_count %></td>
+          <td class = "data"><%= multi_agent_service.consumers_count %></td>
+          <td class = "data"><%= multi_agent_service.prosumers_count %></td>
+          <td class = "data"><%= multi_agent_service.grid_kind %></td>
+          <td class = "data"><%= "#{multi_agent_service.total_time_consumed} μs" %></td>
+          <td><%= link_to 'Edit', edit_multi_agent_service_path(multi_agent_service) %></td>
+          <td><%= link_to 'Delete', multi_agent_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

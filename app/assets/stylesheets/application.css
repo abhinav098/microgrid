@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+.data{
+  text-align: center;
+}
+.heading{
+  background: black;
+  color: white;
+  font-weight: 500;
+}

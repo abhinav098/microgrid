@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumers_count: 1
+  prosumers_count: 1
+  agents_count: 1
+  total_time_consumed: 1
+
+two:
+  consumers_count: 1
+  prosumers_count: 1
+  agents_count: 1
+  total_time_consumed: 1

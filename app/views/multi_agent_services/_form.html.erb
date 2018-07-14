@@ -1,0 +1,20 @@
+<%= form_with(model: multi_agent_service, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :agents_count %>
+    <%= form.number_field :agents_count, id: :multi_agent_service_agents_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :consumers_count %>
+    <%= form.number_field :consumers_count, id: :multi_agent_service_consumers_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prosumers_count %>
+    <%= form.number_field :prosumers_count, id: :multi_agent_service_prosumers_count %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Calculate Time" %>
+  </div>
+<% end %>
